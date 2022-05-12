@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de Mensajes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="principal">
+        <h1>Herramienta para encriptar y desencriptar texto</h1>
+        <br>
+        <hr>
+        <div id="textAreaIn">
+            <label for="txt-encripta"><h2>Ingresa el texto para Encriptar</h2></label><br>
+            <hr>
+            <div class="textEnc" name="txt-encripta" id="txt-encripta" cols="100" rows="15" contenteditable="true"></div><br>
+            <input class="boton" type="button" id="btn-enc" value="Cifrar" onclick="encriptaTexto(this);">
+            <input class="boton" type="button" id="copiar-enc" value="Copiar" onclick="copiarTextoAlPortaPapeles(this.id);">
+            <input class="boton" type="button" id="pegar-enc" value="Pegar" onclick="pegaContenidoDelPortapapeles(this.id);">
+        </div>
+        <div id="textAreaOut">
+            <label for="txt-desencripta"><h2>Ingresa el texto para Desencriptar</h2></label><br>
+            <hr>
+            <div class="textDes" name="txt-desencripta" id="txt-desencripta" cols="100" rows="15" contenteditable="true"></div><br>
+            <input class="boton" type="button" id="btn-des" value="Descifrar"  onclick="desencriptaTexto(this.value);">
+            <input class="boton" type="button" id="copiar-des" value="Copiar" onclick="copiarTextoAlPortaPapeles(this.id);">
+            <input class="boton" type="button" id="pegar-des" value="Pegar">
+        </div>
+    </section>
+    <script src="jsc.js"></script>
+</body>
+</html>
